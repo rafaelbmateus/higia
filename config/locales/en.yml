@@ -2,3 +2,6 @@ en:
   app_name: Higia
   home: Home
   index: Index
+  sessions: Login
+  registrations: Sign Up
+  new: Novo
