@@ -1,6 +1,6 @@
 # Higia
 
-Projet to the Rainbow Hackathon
+Project to the Rainbow Hackathon
 
 # Scaffold
 rails g scaffold patients name email phone cep:integer
