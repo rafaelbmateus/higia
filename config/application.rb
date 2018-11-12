@@ -8,6 +8,16 @@ Bundler.require(*Rails.groups)
 
 module Myapp
   class Application < Rails::Application
+
+    config.to_prepare do 
+      # Load stuff not inside models, views, controllers 
+      [ "../app/sanitizers/*.rb" ].each do |x| 
+        Dir.glob(File.join(File.dirname(__FILE__), x)) do |c| 
+          Rails.configuration.cache_classes ? require(c) : load(c) 
+        end 
+      end
+    end
+
     # Use the responders controller from the responders gem
     config.app_generators.scaffold_controller :responders_controller
 

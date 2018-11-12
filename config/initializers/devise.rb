@@ -8,7 +8,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '3db72ea5d13a0c68809e8cc592fbf89888f1b1076ad50f5d3be5dfae81125beba513148e0dea34dae70568b574247a092e28eed1c53ab77ac3e229ce58a96442'
+  # config.secret_key = 'a3609b60c4d210803712eca60983f5296149f6759637dae177ea9159da73804b906912465d1e70e3299daabca726fa7025642a3b59f86a061cc2add37f785118'
   
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -114,7 +114,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '44c139ddae9722ba3dd3c98e663219b7944ae928d97e044a2d9935ce22891f5c1caf314fe31a3bdb94f90eb7a7a27a39b11dbc01417cc51fb9ed4846abca081e'
+  # config.pepper = 'd5bccb28e61f1ab70ab6af6e90597259417ca78e05eca907b13c26a43cbbc9da15d94887e968aabdd764164c1b121c8447c13f93f494421da01f2250898d9aa1'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -229,7 +229,7 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  # config.scoped_views = false
+  config.scoped_views = true
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
@@ -280,4 +280,11 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+
+  # ==> Turbolinks configuration
+  # If your app is using Turbolinks, Turbolinks::Controller needs to be included to make redirection work correctly:
+  #
+  # ActiveSupport.on_load(:devise_failure_app) do
+  #   include Turbolinks::Controller
+  # end
 end
