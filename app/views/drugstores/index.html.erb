@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Drugstores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Cep</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @drugstores.each do |drugstore| %>
+      <tr>
+        <td><%= drugstore.name %></td>
+        <td><%= drugstore.phone %></td>
+        <td><%= drugstore.cep %></td>
+        <td><%= link_to 'Show', drugstore %></td>
+        <td><%= link_to 'Edit', edit_drugstore_path(drugstore) %></td>
+        <td><%= link_to 'Destroy', drugstore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Drugstore', new_drugstore_path %>
