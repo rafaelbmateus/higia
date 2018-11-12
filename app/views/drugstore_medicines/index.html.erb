@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Drugstore Medicines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Medicine</th>
+      <th>Price</th>
+      <th>Promotion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @drugstore_medicines.each do |drugstore_medicine| %>
+      <tr>
+        <td><%= drugstore_medicine.medicine %></td>
+        <td><%= drugstore_medicine.price %></td>
+        <td><%= drugstore_medicine.promotion %></td>
+        <td><%= link_to 'Show', drugstore_medicine %></td>
+        <td><%= link_to 'Edit', edit_drugstore_medicine_path(drugstore_medicine) %></td>
+        <td><%= link_to 'Destroy', drugstore_medicine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Drugstore Medicine', new_drugstore_medicine_path %>

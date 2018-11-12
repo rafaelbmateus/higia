@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Medicine:</strong>
+  <%= @drugstore_medicine.medicine %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @drugstore_medicine.price %>
+</p>
+
+<p>
+  <strong>Promotion:</strong>
+  <%= @drugstore_medicine.promotion %>
+</p>
+
+<%= link_to 'Edit', edit_drugstore_medicine_path(@drugstore_medicine) %> |
+<%= link_to 'Back', drugstore_medicines_path %>
