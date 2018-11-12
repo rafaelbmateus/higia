@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%= t('app_name') %></title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+</head>
+
+<body class="pace-done">
+  <div id="wrapper">
+    <%= render 'layouts/navigation' %>
+    <div id="page-wrapper" class="gray-bg">
+      <%= render 'layouts/topnavbar' %>
+      <%= render 'shared/page_heading' %>
+      <div class="ibox-content">
+        <%= yield %>
+      </div>
+      <%= render 'layouts/footer' %>
+    </div>
+    <%= yield %>
+  </div>
+
+  <% if flash[:notice] %>
+    <%= render 'layouts/toast' %>
+  <% end %>
+</body>
+</html>
