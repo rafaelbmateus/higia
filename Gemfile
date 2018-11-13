@@ -56,8 +56,6 @@ gem 'figaro'
 gem 'paranoia', '~> 2.2'
 # Cron jobs in Ruby
 gem 'whenever', '~> 0.10.0'
-# RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data
-gem 'rails_admin', '~> 1.2'
 # PDF generator (from HTML) plugin for Ruby on Rails
 gem 'wicked_pdf'
 # This fork uses the updated wkhtmltopdf (> 0.12.0) binaries for Linux x86 and x64, and MacOSs
