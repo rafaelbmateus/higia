@@ -30,6 +30,10 @@
                 <%= link_to destroy_doctor_session_path, :method => :delete do %>
                   <i class="fa fa-sign-out"></i> <%= t('logout') %>
                 <% end %>
+              <% elsif admin_signed_in? %>
+                <%= link_to destroy_admin_session_path, :method => :delete do %>
+                  <i class="fa fa-sign-out"></i> <%= t('logout') %>
+                <% end %>
               <% end %>
             </li>
           </ul>
@@ -39,7 +43,7 @@
       <li class="<%= is_active_controller('home') %>">
         <%= link_to root_path do %>
           <i class="fa fa-th-large"></i>
-          <span class="nav-label"><%= t('chat') %></span>
+          <span class="nav-label">Menu</span>
         <% end %>
       </li>
       <% if patient_signed_in? %>
@@ -87,7 +91,42 @@
         </li>
       <% end %>
       <% if doctor_signed_in? %>
-        <!--TODO-->
+        <li class="<%= is_active_controller('chat') %>">
+          <%= link_to "" do %>
+            <i class="fa fa-users"></i>
+            <span class="nav-label">Chat</span>
+          <% end %>
+        </li>
+        <li class="<%= is_active_controller('call') %>">
+          <%= link_to "" do %>
+            <i class="fa fa-phone"></i>
+            <span class="nav-label">Ligação</span>
+          <% end %>
+        </li>
+        <li class="<%= is_active_controller('call_video') %>">
+          <%= link_to "" do %>
+            <i class="fa fa-desktop"></i>
+            <span class="nav-label">Vídeo Chamada</span>
+          <% end %>
+        </li>
+        <li class="<%= is_active_controller('prescription') %>">
+          <%= link_to "" do %>
+            <i class="fa fa-file-text"></i>
+            <span class="nav-label">Prescrições</span>
+          <% end %>
+        </li>
+        <li class="<%= is_active_controller('drugstores') %>">
+          <%= link_to "" do %>
+            <i class="fa fa-address-book"></i>
+            <span class="nav-label">Farmácias</span>
+          <% end %>
+        </li>
+        <li class="<%= is_active_controller('promotions') %>">
+          <%= link_to "" do %>
+            <i class="fa fa-money"></i>
+            <span class="nav-label">Promoções</span>
+          <% end %>
+        </li>
       <% end %>
       <% if admin_signed_in? %>
         <li class="<%= is_active_controller('patients') %>">
@@ -103,7 +142,7 @@
           <% end %>
         </li>
         <li class="<%= is_active_controller('drugstore') %>">
-          <%= link_to doctors_path do %>
+          <%= link_to drugstores_path do %>
             <i class="fa fa-tint"></i>
             <span class="nav-label">Farmácias</span>
           <% end %>

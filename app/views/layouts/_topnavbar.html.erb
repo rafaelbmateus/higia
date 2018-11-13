@@ -11,6 +11,10 @@
             <%= link_to destroy_doctor_session_path, :method => :delete do %>
               <i class="fa fa-sign-out"></i> <%= t('logout') %>
             <% end %>
+          <% elsif admin_signed_in? %>
+            <%= link_to destroy_admin_session_path, :method => :delete do %>
+              <i class="fa fa-sign-out"></i> <%= t('logout') %>
+            <% end %>
           <% end %>
         </li>
       </li>

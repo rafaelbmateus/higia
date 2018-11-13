@@ -5,5 +5,8 @@ en:
   sessions: Login
   registrations: Sign Up
   new: New
+  edit: Edit
   show: Details
   patients: Patients
+  doctors: Doctors
+  drugstores: Drugstores
