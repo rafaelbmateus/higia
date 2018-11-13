@@ -10,9 +10,11 @@
                 <strong class="font-bold">Rafael</strong>
               </span>
               <% if patient_signed_in? %>
-                <span class="text-muted text-xs block"><%= t('patient') %><b class="caret"></b></span>
+                <span class="text-muted text-xs block">Paciente<b class="caret"></b></span>
               <% elsif doctor_signed_in? %>
-                <span class="text-muted text-xs block"><%= t('doctor') %><b class="caret"></b></span>
+                <span class="text-muted text-xs block">Médico<b class="caret"></b></span>
+              <% elsif admin_signed_in? %>
+                <span class="text-muted text-xs block">Admin<b class="caret"></b></span>
               <% end %>
             </span>
           </a>
@@ -81,6 +83,29 @@
           <%= link_to "" do %>
             <i class="fa fa-money"></i>
             <span class="nav-label">Promoções</span>
+          <% end %>
+        </li>
+      <% end %>
+      <% if doctor_signed_in? %>
+        <!--TODO-->
+      <% end %>
+      <% if admin_signed_in? %>
+        <li class="<%= is_active_controller('patients') %>">
+          <%= link_to patients_path do %>
+            <i class="fa fa-users"></i>
+            <span class="nav-label">Pacientes</span>
+          <% end %>
+        </li>
+        <li class="<%= is_active_controller('doctor') %>">
+          <%= link_to doctors_path do %>
+            <i class="fa fa-user-md"></i>
+            <span class="nav-label">Médicos</span>
+          <% end %>
+        </li>
+        <li class="<%= is_active_controller('drugstore') %>">
+          <%= link_to doctors_path do %>
+            <i class="fa fa-tint"></i>
+            <span class="nav-label">Farmácias</span>
           <% end %>
         </li>
       <% end %>

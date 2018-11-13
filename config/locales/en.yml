@@ -4,4 +4,6 @@ en:
   index: Index
   sessions: Login
   registrations: Sign Up
-  new: Novo
+  new: New
+  show: Details
+  patients: Patients

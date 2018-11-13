@@ -4,6 +4,8 @@ class HomeController < ApplicationController
       render :patient
     elsif doctor_signed_in?
       render :doctor
+    elsif admin_signed_in?
+      render :admin
     end
   end
 end

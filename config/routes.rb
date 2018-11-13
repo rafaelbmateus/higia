@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admins
+  resources :admins
   root 'home#index'
   devise_for :doctors
   devise_for :patients
