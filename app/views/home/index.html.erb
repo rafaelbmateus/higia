@@ -1,3 +1,63 @@
-<%= link_to "Paciente", new_patient_session_path %>
-<br>
-<%= link_to "Médico", new_doctor_session_path %>
+<h1 align="center">Escolha seu perfil</h1>
+
+<div class="row">
+  <div class="col-lg-3 animated bounceIn">
+    <%= link_to new_patient_session_path do %>
+      <div class="widget style1 navy-bg">
+        <div class="row">
+          <div class="col-xs-4">
+            <i class="fa fa-users fa-5x"></i>
+          </div>
+          <div class="col-xs-8 text-right">
+            <span>Paciente</span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="col-lg-3 animated bounceIn">
+    <%= link_to new_doctor_session_path do %>
+      <div class="widget style1 red-bg">
+        <div class="row">
+          <div class="col-xs-4">
+            <i class="fa fa-address-book fa-5x"></i>
+          </div>
+          <div class="col-xs-8 text-right">
+            <span>Médico</span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="col-lg-3 animated bounceIn">
+    <%= link_to new_doctor_session_path do %>
+      <div class="widget style1 yellow-bg">
+        <div class="row">
+          <div class="col-xs-4">
+            <i class="fa fa-money fa-5x"></i>
+          </div>
+          <div class="col-xs-8 text-right">
+            <span>Farmácia</span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  
+  <div class="col-lg-3 animated bounceIn">
+    <%= link_to new_admin_session_path do %>
+      <div class="widget style1 gray-bg">
+        <div class="row">
+          <div class="col-xs-4">
+            <i class="fa fa-users fa-5x"></i>
+          </div>
+          <div class="col-xs-8 text-right">
+            <span>Admin</span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

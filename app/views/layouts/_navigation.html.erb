@@ -7,7 +7,13 @@
           <a data-toggle="dropdown" class="dropdown-toggle" href="#">
             <span class="clear">
               <span class="block m-t-xs">
-                <strong class="font-bold">Rafael</strong>
+                <% if patient_signed_in? %>
+                  <strong class="font-bold"><%= current_patient.name %></strong>
+                <% elsif doctor_signed_in? %>
+                  <strong class="font-bold"><%= current_doctor.name %></strong>
+                <% elsif admin_signed_in? %>
+                  <strong class="font-bold"><%= current_admin.name %></strong>
+                <% end %>
               </span>
               <% if patient_signed_in? %>
                 <span class="text-muted text-xs block">Paciente<b class="caret"></b></span>
@@ -129,22 +135,10 @@
         </li>
       <% end %>
       <% if admin_signed_in? %>
-        <li class="<%= is_active_controller('patients') %>">
-          <%= link_to patients_path do %>
-            <i class="fa fa-users"></i>
-            <span class="nav-label">Pacientes</span>
-          <% end %>
-        </li>
-        <li class="<%= is_active_controller('doctor') %>">
-          <%= link_to doctors_path do %>
-            <i class="fa fa-user-md"></i>
-            <span class="nav-label">Médicos</span>
-          <% end %>
-        </li>
-        <li class="<%= is_active_controller('drugstore') %>">
-          <%= link_to drugstores_path do %>
-            <i class="fa fa-tint"></i>
-            <span class="nav-label">Farmácias</span>
+        <li class="">
+          <%= link_to rails_admin_path do %>
+            <i class="fa fa-lock"></i>
+            <span class="nav-label">Administração</span>
           <% end %>
         </li>
       <% end %>
