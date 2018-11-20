@@ -1,7 +1,8 @@
 .nav > li > a {
-  color: $nav-text-color;
+  // color: $nav-text-color;
+  color: white;
   font-weight: 600;
-  padding: 14px 20px 14px 25px;
+  padding: 14px 15px 14px 15px;
 }
 
 .nav.navbar-right > li > a {
@@ -13,7 +14,9 @@
 }
 
 .navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus {
-  background-color: darken($nav-bg, 3%);
+  // background-color: darken($nav-bg, 3%);
+  background-color: rgba(255,255,255,.2);
+  border-radius: 6px;
   color: white;
 }
 
@@ -151,9 +154,9 @@
 }
 
 .nav-header {
-  padding: 33px 25px;
-  background-color: $nav-bg;
-  background-image: $nav-profile-pattern;
+  padding: 33px 0;
+  // background-color: $nav-bg;
+  // background-image: $nav-profile-pattern;
 
 }
 
@@ -166,8 +169,13 @@ ul.nav-second-level {
 }
 
 .nav > li.active {
-  border-left: 4px solid darken($navy, 2%);
-  background: darken($nav-bg, 3%);
+  // border-left: 4px solid darken($navy, 2%);
+  background: rgba(255,255,255,.25);
+  border-radius: 6px;
+}
+
+.nav > li {
+  margin: 0 15px;
 }
 
 .nav.nav-second-level > li.active {
