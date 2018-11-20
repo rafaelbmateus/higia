@@ -34,6 +34,8 @@ gem 'i18n_generators', '~> 2.1', '>= 2.1.1'
 gem 'carrierwave', '~> 1.0'
 # RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data
 gem 'rails_admin', '~> 1.2'
+# Translations for the rails_admin gem
+gem 'rails_admin-i18n'
 # 'Automagically' fills an address form http://autocompletezipcode.herokuapp.com
 gem 'autocomplete_zipcode'
 # A tagging plugin for Rails applications that allows for custom tagging along dynamic contexts.

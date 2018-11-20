@@ -11,3 +11,57 @@ pt-BR:
   doctors: Médicos
   drugstores: Farmácias
   doctor_prescriptions: Prescrições Médicas
+  activerecord:
+      models:
+        doctor: Médico
+        doctor_prescription: Prescrição Médica
+        drugstore: Farmácia
+        drugstore_medicine: Medicamentos da Farmácia
+        hospital: Hospital
+        medicine: Medicamento
+        patient: Paciênte
+      attributes:
+        admin:
+          name: Nome
+          phone: Telefone
+          password: Senha
+          password_confirmation: Confirmação Senha
+          created_at: Criado em
+          updated_at: Atualizado em
+        doctor:
+          name: Nome
+          phone: Telefone
+          password: Senha
+          password_confirmation: Confirmação Senha
+          created_at: Criado em
+          updated_at: Atualizado em
+        patient:
+          name: Nome
+          phone: Telefone
+          password: Senha
+          password_confirmation: Confirmação Senha
+          created_at: Criado em
+          updated_at: Atualizado em
+        drugstore:
+          name: Nome
+          phone: Telefone
+          created_at: Criado em
+          updated_at: Atualizado em
+        hospital:
+          name: Nome
+          phone: Telefone
+          created_at: Criado em
+          updated_at: Atualizado em
+        medicine:
+          name: Nome
+          derscription: Descrição
+        drugstore_medicine:
+          medicine: Medicamento
+          price: Preço
+          promotion: Promoção
+        doctor_prescription:
+          doctor: Médico
+          patient: Paciênte
+          medicine: Medicamento
+          dosage: Dosagem
+          description: Descrição
