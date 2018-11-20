@@ -18,6 +18,11 @@ module Myapp
       end
     end
 
+    config.i18n.enforce_available_locales = false
+    config.i18n.available_locales = [:en, :'pt-BR']
+    config.i18n.default_locale = :'pt-BR'
+    config.time_zone = 'Brasilia'
+
     # Use the responders controller from the responders gem
     config.app_generators.scaffold_controller :responders_controller
 

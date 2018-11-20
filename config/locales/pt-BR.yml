@@ -1,0 +1,13 @@
+pt-BR:
+  app_name: Higia
+  home: Principal
+  index: Lista
+  sessions: Entrar
+  registrations: Registrar
+  new: Novo
+  edit: Editar
+  show: Detalhes
+  patients: Paciêntes
+  doctors: Médicos
+  drugstores: Farmácias
+  doctor_prescriptions: Prescrições Médicas

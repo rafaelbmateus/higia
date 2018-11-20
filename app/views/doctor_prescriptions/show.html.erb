@@ -1,18 +1,11 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Doctor:</strong>
-  <%= @doctor_prescription.doctor %>
+  <strong>Médico:</strong>
+  <%= @doctor_prescription.doctor.name %>
 </p>
 
 <p>
-  <strong>Patient:</strong>
-  <%= @doctor_prescription.patient %>
-</p>
-
-<p>
-  <strong>Medicine:</strong>
-  <%= @doctor_prescription.medicine %>
+  <strong>Medicamento:</strong>
+  <%= @doctor_prescription.medicine.name %>
 </p>
 
 <p>
@@ -25,5 +18,4 @@
   <%= @doctor_prescription.description %>
 </p>
 
-<%= link_to 'Edit', edit_doctor_prescription_path(@doctor_prescription) %> |
-<%= link_to 'Back', doctor_prescriptions_path %>
+<%= link_to 'Voltar', doctor_prescriptions_path, class: 'btn btn-primary' %>
