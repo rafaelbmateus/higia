@@ -11,6 +11,8 @@ pt-BR:
   doctors: Médicos
   drugstores: Farmácias
   doctor_prescriptions: Prescrições Médicas
+  chats: Conversas
+  promotion: Promoção  
   activerecord:
       models:
         doctor: Médico

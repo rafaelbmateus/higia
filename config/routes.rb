@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'promotion/index'
+  get 'chats/index'
   get 'rainbow/index'
   mount RailsAdmin::Engine => '/cafe', as: 'rails_admin'
   devise_for :admins

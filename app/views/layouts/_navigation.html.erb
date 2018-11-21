@@ -27,8 +27,8 @@
           <% end %>
         </li>
 
-        <li class="<%= is_active_controller('chat') %>">
-          <%= link_to "" do %>
+        <li class="<%= is_active_controller('chats') %>">
+          <%= link_to chats_index_path do %>
             <i class="fa fa-users"></i>
             <span class="nav-label">Conversas</span>
           <% end %>
@@ -49,14 +49,14 @@
         <% end %>
         
         <li class="<%= is_active_controller('drugstores') %>">
-          <%= link_to "" do %>
+          <%= link_to drugstores_path do %>
             <i class="fa fa-address-book"></i>
             <span class="nav-label">Farmácias</span>
           <% end %>
         </li>
 
-        <li class="<%= is_active_controller('promotions') %>">
-          <%= link_to "" do %>
+        <li class="<%= is_active_controller('promotion') %>">
+          <%= link_to promotion_index_path do %>
             <i class="fa fa-money"></i>
             <span class="nav-label">Promoções</span>
           <% end %>
