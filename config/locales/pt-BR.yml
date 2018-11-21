@@ -12,7 +12,8 @@ pt-BR:
   drugstores: Farmácias
   doctor_prescriptions: Prescrições Médicas
   chats: Conversas
-  promotion: Promoção  
+  promotion: Promoção
+  medicines: Medicamentos  
   activerecord:
       models:
         doctor: Médico
