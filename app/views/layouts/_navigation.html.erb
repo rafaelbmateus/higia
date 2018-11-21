@@ -17,15 +17,23 @@
         <li class="<%= is_active_controller('home') %>">
           <%= link_to root_path do %>
             <i class="fa fa-file-text"></i>
-            <span class="nav-label">Minhas prescrições</span>
+            <span class="nav-label">Minhas Prescrições</span>
           <% end %>
         </li>
+        <li class="<%= is_active_controller('medicines') %>">
+          <%= link_to "" do %>
+            <i class="fa fa-tint"></i>
+            <span class="nav-label">Meus Remédios</span>
+          <% end %>
+        </li>
+
         <li class="<%= is_active_controller('chat') %>">
           <%= link_to "" do %>
             <i class="fa fa-users"></i>
-            <span class="nav-label">Chat</span>
+            <span class="nav-label">Conversas</span>
           <% end %>
         </li>
+        <% if false %>
         <li class="<%= is_active_controller('call') %>">
           <%= link_to "" do %>
             <i class="fa fa-phone"></i>
@@ -38,18 +46,15 @@
             <span class="nav-label">Vídeo Chamada</span>
           <% end %>
         </li>
-        <li class="<%= is_active_controller('medicines') %>">
-          <%= link_to "" do %>
-            <i class="fa fa-tint"></i>
-            <span class="nav-label">Remédios</span>
-          <% end %>
-        </li>
+        <% end %>
+        
         <li class="<%= is_active_controller('drugstores') %>">
           <%= link_to "" do %>
             <i class="fa fa-address-book"></i>
             <span class="nav-label">Farmácias</span>
           <% end %>
         </li>
+
         <li class="<%= is_active_controller('promotions') %>">
           <%= link_to "" do %>
             <i class="fa fa-money"></i>
