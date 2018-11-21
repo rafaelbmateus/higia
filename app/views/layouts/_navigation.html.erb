@@ -5,7 +5,7 @@
         <div class="dropdown profile-element">
           <%= image_tag("higia.svg", :alt => "Higia") %>
         </div>
-        <div class="logo-element"><%= t('app_name') %></div>
+        <div class="logo-element"><%= image_tag("higia.svg", :alt => "Higia") %></div>
       </li>
       <% if patient_signed_in? %>
         <li>
@@ -69,6 +69,18 @@
         </li>
       <% end %>
       <% if doctor_signed_in? %>
+        <li>
+          <%= link_to edit_patient_registration_path do %>
+            <i class="fa fa-user"></i>
+            <span class="nav-label"><%= current_doctor.name %></span>
+          <% end %>
+        </li>
+        <li class="<%= is_active_controller('home') %>">
+          <%= link_to root_path do %>
+            <i class="fa fa-file-text"></i>
+            <span class="nav-label">Menu</span>
+          <% end %>
+        </li>
         <li class="<%= is_active_controller('chat') %>">
           <%= link_to "" do %>
             <i class="fa fa-users"></i>
@@ -105,12 +117,30 @@
             <span class="nav-label">Promoções</span>
           <% end %>
         </li>
+        <li>
+          <%= link_to destroy_doctor_session_path, :method => :delete do %>
+            <i class="fa fa-sign-out"></i>
+            <span class="nav-label">Logout</span>
+          <% end %>
+        </li>
       <% end %>
       <% if admin_signed_in? %>
+        <li class="<%= is_active_controller('home') %>">
+          <%= link_to root_path do %>
+            <i class="fa fa-file-text"></i>
+            <span class="nav-label">Menu</span>
+          <% end %>
+        </li>
         <li class="">
           <%= link_to rails_admin_path do %>
             <i class="fa fa-lock"></i>
             <span class="nav-label">Administração</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to destroy_doctor_session_path, :method => :delete do %>
+            <i class="fa fa-sign-out"></i>
+            <span class="nav-label">Logout</span>
           <% end %>
         </li>
       <% end %>

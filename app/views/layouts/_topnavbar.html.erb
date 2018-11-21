@@ -1,23 +1,7 @@
 <div class="row border-bottom">
   <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-    <ul class="nav navbar-top-links navbar-right">
-      <li class="dropdown">
-        <li>
-          <% if patient_signed_in? %>
-            <%= link_to destroy_patient_session_path, :method => :delete do %>
-              <i class="fa fa-sign-out"></i> <%= t('logout') %>
-            <% end %>
-          <% elsif doctor_signed_in? %>
-            <%= link_to destroy_doctor_session_path, :method => :delete do %>
-              <i class="fa fa-sign-out"></i> <%= t('logout') %>
-            <% end %>
-          <% elsif admin_signed_in? %>
-            <%= link_to destroy_admin_session_path, :method => :delete do %>
-              <i class="fa fa-sign-out"></i> <%= t('logout') %>
-            <% end %>
-          <% end %>
-        </li>
-      </li>
-    </ul>
+    <div class="navbar-header">
+      <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+    </div>
   </nav>
 </div>
