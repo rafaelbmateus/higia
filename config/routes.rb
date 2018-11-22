@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'patients/my_medicines'
   get 'promotion/index'
   get 'chats/index'
   get 'rainbow/index'

@@ -1,0 +1,27 @@
+<% order_by = 0 unless order_by %>
+<% order = 'asc' unless order %>
+
+<script type="text/javascript">
+$(function() {
+    $('.datatable').DataTable({
+        "language": {"url": "/datatable-<%= I18n.locale %>.lang"},
+        order: [[ '<%= order_by %>', '<%= order %>' ]],
+        pageLength: 25,
+        responsive: true,
+        dom: '<"html5buttons"B>lTfgitp',
+        buttons: [
+            {text: '<%= t('copy') %>', extend: 'copy'},
+            {extend: 'csv', title: '<%= name %>', exportOptions: {columns: ':visible:not(.not-export-col)'}},
+            {extend: 'excel', title: '<%= name %>', exportOptions: {columns: ':visible:not(.not-export-col)'}},
+            {extend: 'pdf', title: '<%= name %>', exportOptions: {columns: ':visible:not(.not-export-col)'}},
+            {extend: 'print', exportOptions: {columns: ':visible:not(.not-export-col)'},
+                customize: function (win){
+                    $(win.document.body).addClass('white-bg');
+                    $(win.document.body).css('font-size', '10px');
+                    $(win.document.body).find('table').addClass('compact').css('font-size', 'inherit');
+                }
+            }
+        ]
+    });
+});
+</script>
