@@ -26,21 +26,18 @@
             <span class="nav-label">Meus Remédios</span>
           <% end %>
         </li>
-        
+        <li class="<%= is_active_controller('drugstore_medicines') %>">
+          <%= link_to drugstore_medicines_path do %>
+            <i class="fa fa-medkit"></i>
+            <span class="nav-label">Medicamentos</span>
+          <% end %>
+        </li>
         <li class="<%= is_active_controller('drugstores') %>">
           <%= link_to drugstores_path do %>
             <i class="fa fa-address-book"></i>
             <span class="nav-label">Farmácias</span>
           <% end %>
         </li>
-
-        <li class="<%= is_active_controller('medicines') %>">
-          <%= link_to drugstore_medicines_path do %>
-            <i class="fa fa-money"></i>
-            <span class="nav-label">Medicamentos</span>
-          <% end %>
-        </li>
-
         <li class="<%= is_active_controller('promotion') %>">
           <%= link_to promotion_index_path do %>
             <i class="fa fa-money"></i>

@@ -1,2 +1,28 @@
-<h1>Promotion#index</h1>
-<p>Find me in app/views/promotion/index.html.erb</p>
+<div class="ibox-content animated fadeInRightBig">
+  <table class="table table-striped table-bordered table-hover datatable">
+    <thead>
+      <tr>
+        <th>Medicamento</th>
+        <th>Farmácia</th>
+        <th>Preço</th>
+        <th>Promoção</th>
+        <th width="1%"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @drugstore_medicines.each do |drugstore_medicine| %>
+        <tr>
+          <td><%= drugstore_medicine.medicine.name %></td>
+          <td><%= drugstore_medicine.drugstore.name %></td>
+          <td><%= number_to_currency(drugstore_medicine.price, :unit => "R$") %></td>
+          <td><%= number_to_currency(drugstore_medicine.promotion_price, :unit => "R$") %></td>
+          <td align="center">
+            <%= render 'shared/btn_single', link_to: drugstore_medicine %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= render 'shared/datatable', name: 'Medicamentos' %>

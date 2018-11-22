@@ -1,24 +1,25 @@
-<table class="table table-striped table-bordered table-hover datatable">
-  <thead>
-    <tr>
-      <th>Medicamento</th>
-      <th>Médico</th>
-      <th>Dosagem</th>
-      <th width="1%"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @doctor_prescriptions.each do |doctor_prescription| %>
+<div class="ibox-content animated fadeInRightBig">
+  <table class="table table-striped table-bordered table-hover datatable">
+    <thead>
       <tr>
-        <td><%= doctor_prescription.medicine.name %></td>
-        <td><%= doctor_prescription.doctor.name %></td>
-        <td><%= doctor_prescription.dosage %></td>
-        <td align="center">
-          <%= render 'shared/btn_single', link_to: doctor_prescription %>
-        </td>
+        <th>Medicamento</th>
+        <th>Médico</th>
+        <th>Dosagem</th>
+        <th width="1%"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<%= render 'shared/datatable', name: 'Medicamentos' %>
+    </thead>
+    <tbody>
+      <% @doctor_prescriptions.each do |doctor_prescription| %>
+        <tr>
+          <td><%= doctor_prescription.medicine.name %></td>
+          <td><%= doctor_prescription.doctor.name %></td>
+          <td><%= doctor_prescription.dosage %></td>
+          <td align="center">
+            <%= render 'shared/btn_single', link_to: doctor_prescription %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= render 'shared/datatable', name: 'Medicamentos' %>
+</div>
