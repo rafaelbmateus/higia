@@ -1,26 +1,29 @@
-<h2>Log in</h2>
+<div class="middle-box text-center loginscreen  animated fadeInDown">
+  <h3 align="center" style="font-size: 30px; font-family: initial">Login Médico</h3><br>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+  <% flash.each do |key, value| %>
+    <div align="center" id="flash" class="alert alert-danger" style="font-size: 15px"><%= value %></div>
+  <% end %>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%= f.email_field :email, class: "form-control", placeholder: "Digíte seu E-mail", autofocus: true %>
     </div>
-  <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+    <br>
 
-<%= render "doctors/shared/links" %>
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Digíte sua Senha" %>
+    </div>
+
+    <br><br>
+
+    <div class="actions">
+      <%= f.submit "Login", :class => "btn btn-primary block full-width m-b" %>
+    </div>
+  <% end %>
+  <br>
+  <a class="btn btn-default" href="/doctors/sign_up">Registra-se</a>
+  <br><br><br><br>
+</div>
+<a href="/">Voltar</a>
