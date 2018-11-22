@@ -1,3 +1,13 @@
+.higia-button {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  width: 60px;
+  height: 60px;
+  background-color: #98a2fe;
+  border-radius: 30px;
+}
+
 .nav > li > a {
   // color: $nav-text-color;
   color: white;
@@ -38,8 +48,11 @@
 }
 
 .navbar-default {
-  background-color: transparent;
+  // background-color: transparent;
   border-color: $nav-bg;
+  background: linear-gradient(138.34deg, #85CAFF 0%, #baa5ff 100%);
+  position: fixed !important;
+  height: 100vh;
 }
 
 .navbar-top-links li {
