@@ -2,6 +2,11 @@ class PatientsController < ApplicationController
   before_action :set_patient, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
+  
+  def my_medicines
+    @doctor_prescriptions = DoctorPrescription.where(patient: current_patient) #.pluck(:medicine_id).uniq
+    # @drugstore_medicines = DrugstoreMedicine.where(medicine_id: my_medicines_ids)
+  end
 
   def index
     @patients = Patient.all

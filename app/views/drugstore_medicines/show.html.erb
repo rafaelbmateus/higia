@@ -1,8 +1,6 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Medicine:</strong>
-  <%= @drugstore_medicine.medicine %>
+  <%= @drugstore_medicine.medicine.name %>
 </p>
 
 <p>
@@ -12,8 +10,7 @@
 
 <p>
   <strong>Promotion:</strong>
-  <%= @drugstore_medicine.promotion %>
+  <%= @drugstore_medicine.promotion_price %>
 </p>
 
-<%= link_to 'Edit', edit_drugstore_medicine_path(@drugstore_medicine) %> |
-<%= link_to 'Back', drugstore_medicines_path %>
+<%= link_to 'Back', '/' %>

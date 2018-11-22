@@ -20,8 +20,8 @@
             <span class="nav-label">Minhas Prescrições</span>
           <% end %>
         </li>
-        <li class="<%= is_active_controller('') %>">
-          <%= link_to "" do %>
+        <li class="<%= is_active_controller_action('patients', 'my_medicines') %>">
+          <%= link_to patients_my_medicines_path do %>
             <i class="fa fa-tint"></i>
             <span class="nav-label">Meus Remédios</span>
           <% end %>
@@ -35,7 +35,7 @@
         </li>
 
         <li class="<%= is_active_controller('medicines') %>">
-          <%= link_to medicines_path do %>
+          <%= link_to drugstore_medicines_path do %>
             <i class="fa fa-money"></i>
             <span class="nav-label">Medicamentos</span>
           <% end %>
