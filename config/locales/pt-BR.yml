@@ -61,7 +61,8 @@ pt-BR:
         drugstore_medicine:
           medicine: Medicamento
           price: Preço
-          promotion: Promoção
+          drugstore: Farmácia
+          promotion_price: Preço Promocional
         doctor_prescription:
           doctor: Médico
           patient: Paciênte
