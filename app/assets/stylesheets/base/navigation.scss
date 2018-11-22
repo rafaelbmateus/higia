@@ -4,8 +4,21 @@
   bottom: 15px;
   width: 60px;
   height: 60px;
-  background-color: #98a2fe;
+  background: linear-gradient(138.34deg, #85CAFF 0%, #baa5ff 100%);
   border-radius: 30px;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 250ms;
+  img {
+    width: 68%;
+    margin-bottom: -6px;
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
 }
 
 .nav > li > a {
