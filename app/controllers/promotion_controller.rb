@@ -1,5 +1,5 @@
 class PromotionController < ApplicationController
   def index
-    @drugstore_medicines = DrugstoreMedicine.where('drugstore_medicines.promotion_price IS NOT NULL')
+    @drugstore_medicines = DrugstoreMedicine.where.not(promotion_price: nil)
   end
 end
