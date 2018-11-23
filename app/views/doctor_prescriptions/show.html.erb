@@ -9,13 +9,15 @@
 </p>
 
 <p>
-  <strong>Dosage:</strong>
+  <strong>Dosagem:</strong>
   <%= @doctor_prescription.dosage %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Descrição:</strong>
   <%= @doctor_prescription.description %>
 </p>
 
-<%= link_to 'Voltar', doctor_prescriptions_path, class: 'btn btn-primary' %>
+<%= link_to 'Comprar', checkout_path(@doctor_prescription.medicine) %>
+
+<%= link_to 'Voltar', "/", class: 'btn btn-primary' %>

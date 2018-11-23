@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'checkout/index'
-  get 'checkout/done'
+  get 'checkout/:id', to: 'checkout#index', as: 'checkout'
+  get 'checkout/done/:id', to: 'checkout#done', as: 'checkout_done'
   get 'patients/my_medicines'
   get 'promotion/index'
   get 'chats/index'
