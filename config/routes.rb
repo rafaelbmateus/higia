@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'checkout/index'
+  get 'checkout/done'
   get 'patients/my_medicines'
   get 'promotion/index'
   get 'chats/index'
