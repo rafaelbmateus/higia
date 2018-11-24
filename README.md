@@ -17,5 +17,7 @@ rails g scaffold drugstores name phone cep:integer
 
 rails g scaffold drugstore_medicines medicine:references price:decimal promotion:boolean
 
+CRM e assinatura no médico
+
 # Database Diagram
 ![Diagram](db_diagram.png)

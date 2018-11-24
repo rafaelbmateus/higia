@@ -5,15 +5,14 @@
         <a class="row" href="profile.html">
           <div class="col-4">
             <div class="text-center">
-              <%= image_tag(drugstore_medicine.medicine) %>
+              <%= image_tag(drugstore_medicine.medicine.medicine_url) if drugstore_medicine.medicine.medicine_url %>
               <img alt="image" class="rounded-circle m-t-xs img-fluid" src="img/a2.jpg">
-              <div class="m-t-xs font-bold">Graphics designer</div>
+              <div class="m-t-xs font-bold"><%= drugstore_medicine.medicine.name %></div>
             </div>
           </div>
           <div class="col-8">
-            <h3><strong><%= drugstore_medicine.medicine.name %></strong></h3>
-            <h4><strong><%= drugstore_medicine.drugstore.name %></strong></h4>
             <address>
+              <b><%= drugstore_medicine.drugstore.name %></b>
               <%= drugstore_medicine.drugstore.city %><br>
               <%= drugstore_medicine.drugstore.state %><br>
               <%= drugstore_medicine.drugstore.cep %><br>
