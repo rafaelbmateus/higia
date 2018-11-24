@@ -18,6 +18,38 @@
   <%= @doctor_prescription.description %>
 </p>
 
-<%= link_to 'Comprar', checkout_path(@doctor_prescription.medicine) %>
-
-<%= link_to 'Voltar', "/", class: 'btn btn-primary' %>
+<hr>
+<h1 align="center">Comprar Medicamento</h1>
+<div class="row">
+  <% drugstore_medicines = DrugstoreMedicine.where(medicine: @doctor_prescription.medicine) %>
+  <% drugstore_medicines.each do |drugstore_medicine| %>
+    <div class="col-md-3">
+      <div class="ibox">
+        <div class="ibox-content product-box <%= "active" if drugstore_medicine.promotion_price %>">
+          <div class="product-imitation">
+            <%= drugstore_medicine.medicine.medicine %>
+          </div>
+          <div class="product-desc">
+            <span class="product-price">
+              <% if drugstore_medicine.promotion_price %>
+                <%= number_to_currency(drugstore_medicine.promotion_price, :unit => "R$") %>
+              <% else %>
+                <%= number_to_currency(drugstore_medicine.price, :unit => "R$") %>
+              <% end %>
+            </span>
+            <small class="text-muted"><%= drugstore_medicine.drugstore.name %></small>
+            <a href="#" class="product-name"><%= drugstore_medicine.medicine.name %></a>
+            <div class="small m-t-xs">
+              <%= drugstore_medicine.medicine.description %>
+            </div>
+            <div class="m-t text-righ">
+              <%= link_to 'Comprar', checkout_path(drugstore_medicine), class: 'btn btn-xs btn-outline btn-primary' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<br><br>
+<%= link_to 'Voltar', "/" %>

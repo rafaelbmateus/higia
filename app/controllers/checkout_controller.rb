@@ -1,6 +1,6 @@
 class CheckoutController < ApplicationController
   def index
-    @medicine = Medicine.find(params[:id])
+    @drugstore_medicine = DrugstoreMedicine.find(params[:id])
   end
 
   def done
