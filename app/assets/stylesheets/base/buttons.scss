@@ -1,3 +1,33 @@
+.button {
+  &.-purple {
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #98a2fe;
+    color: #7681ec;
+    padding: 10px 15px;
+    display: inline-block;
+    &:hover {
+      cursor: pointer;
+      color: white;
+      background-color: #98a2fe;
+    }
+  }
+  &.-grey {
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid rgb(200,200,200);
+    color: rgb(100,100,100);
+    padding: 10px 15px;
+    display: inline-block;
+    &:hover {
+      cursor: pointer;
+      color: white;
+      background-color: rgb(200,200,200);
+    }
+
+  }
+}
+
 
 .btn {
   border-radius: $btn-border-radius;

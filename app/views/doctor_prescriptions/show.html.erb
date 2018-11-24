@@ -19,7 +19,10 @@
 </p>
 
 <hr>
-<h1 align="center">Comprar Medicamento</h1>
+
+<div class="button -grey">Encontrar Medicamento</div>
+
+
 <div class="row">
   <% drugstore_medicines = DrugstoreMedicine.where(medicine: @doctor_prescription.medicine) %>
   <% drugstore_medicines.each do |drugstore_medicine| %>

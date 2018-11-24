@@ -9,6 +9,22 @@
 $(document).ready(function () {
 
 
+    $('.higia-button').click( function() {
+        $(".chatbox").toggleClass("-open");
+    } );
+    
+        // to create
+        $("#chat_div").chatbox({id : "chat_div",
+                                title : "Title",
+                                user : "can be anything",
+                                offset: 200,
+                                messageSent: function(id, user, msg){
+                                     alert("DOM " + id + " just typed in " + msg);
+                                }});
+        // to insert a message
+        $("#chat_div").chatbox("option", "boxManager").addMsg("Mr. Foo", "Barrr!");
+
+
     // Add body-small class if window less than 768px
     if ($(this).width() < 769) {
         $('body').addClass('body-small')

@@ -50,6 +50,23 @@
             <span class="nav-label">Logout</span>
           <% end %>
         </li>
+
+        <div class="chatbox">
+          <div class="wrapper">
+            <div class="fixed-message">
+            Olá, o que posso ajudar?
+            </div>
+            <div class="mymessage">
+            Gostaria de achar tylenol em são josé
+            </div>
+          </div>
+          <input type="text" placeholder="Escreva para a Higia..." />
+        </div>
+
+        <div class="higia-button">
+          <%= image_tag("higia-avatar.svg", :alt => "Higia Avatar") %>
+        </div>
+
       <% end %>
       <% if doctor_signed_in? %>
         <li>
