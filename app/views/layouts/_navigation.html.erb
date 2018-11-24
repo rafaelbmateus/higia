@@ -8,12 +8,6 @@
         <div class="logo-element"><%= image_tag("higia.svg", :alt => "Higia") %></div>
       </li>
       <% if patient_signed_in? %>
-        <li>
-          <%= link_to edit_patient_registration_path do %>
-            <i class="fa fa-user"></i>
-            <span class="nav-label"><%= current_patient.name %></span>
-          <% end %>
-        </li>
         <li class="<%= is_active_controller('home') %>">
           <%= link_to root_path do %>
             <i class="fa fa-file-text"></i>
@@ -29,7 +23,7 @@
         <li class="<%= is_active_controller('drugstore_medicines') %>">
           <%= link_to drugstore_medicines_path do %>
             <i class="fa fa-medkit"></i>
-            <span class="nav-label">Buscar Medicamentos</span>
+            <span class="nav-label">Buscar Remédio</span>
           <% end %>
         </li>
         <li class="<%= is_active_controller('drugstores') %>">
@@ -42,6 +36,12 @@
           <%= link_to promotion_index_path do %>
             <i class="fa fa-money"></i>
             <span class="nav-label">Promoções</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to edit_patient_registration_path do %>
+            <i class="fa fa-user"></i>
+            <span class="nav-label"><%= current_patient.name %></span>
           <% end %>
         </li>
         <li>

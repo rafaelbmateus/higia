@@ -1,5 +1,6 @@
-
-<div class="button -grey">Encontrar Medicamento</div>
+<div class="controls">
+  <div class="button -purple new-medicine">Encontrar Medicamento</div>
+</div>
 
 <p>
   <strong>Médico:</strong>
@@ -14,6 +15,121 @@
 <p>
   <strong>Dosagem:</strong>
   <%= @doctor_prescription.dosage %>
+</p>
+
+<p>
+  <strong>Duração:</strong>
+  2 dias
+</p>
+
+<p>
+  <strong>Descrição:</strong>
+  <%= @doctor_prescription.description %>
+</p>
+
+<hr>
+
+
+<div class="button -purple">Iniciar tratamento</div>
+<div class="button -grey">Configurar Notificações</div>
+
+<table class="treatment">
+  <thead>
+   <tr>
+      <th>Dose</th>
+      <th>Dia</th>
+      <th width="100">Tomou a dose?</th>
+   </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        Dose 01
+      </td>
+      <td>
+        Dia 01
+      </td>
+      <td>
+        <input type="checkbox">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Dose 02
+      </td>
+      <td>
+        Dia 01
+      </td>
+      <td>
+        <input type="checkbox">
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+<table class="treatment">
+<thead>
+   <tr>
+      <th></th>
+      <th></th>
+      <th width="100"></th>
+   </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        Dose 01
+      </td>
+      <td>
+        Dia 02
+      </td>
+      <td>
+        <input type="checkbox">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Dose 02
+      </td>
+      <td>
+        Dia 02
+      </td>
+      <td>
+        <input type="checkbox">
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+
+<div class="controls">
+  <div class="button -purple new-medicine">Encontrar Medicamento</div>
+</div>
+
+<p>
+  <strong>Médico:</strong>
+  <%= @doctor_prescription.doctor.name %>
+</p>
+
+<p>
+  <strong>Medicamento:</strong>
+  <%= @doctor_prescription.medicine.name %>
+</p>
+
+<p>
+  <strong>Dosagem:</strong>
+  <%= @doctor_prescription.dosage %>
+</p>
+
+<p>
+  <strong>Duração:</strong>
+  2 dias
 </p>
 
 <p>

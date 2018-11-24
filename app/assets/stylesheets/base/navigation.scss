@@ -61,6 +61,72 @@
   }
 }
 
+input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgb(240,240,240);
+  border-radius: 6px;
+  color: rgb(40,40,40);
+  padding: 0 15px;
+  &:focus {
+    outline: none;
+  }
+}
+
+.qrcode {
+  // float: right;
+  width: 140px;
+}
+
+.signature {
+  width: 200px;
+}
+
+.ml {
+  &-10 {
+    margin-left: 10px;
+  }
+  &-20 {
+    margin-left: 20px;
+  }
+  &-40 {
+    margin-left: 40px;
+  }
+  &-60 {
+    margin-left: 60px;
+  }
+}
+
+.mt {
+  &-10 {
+    margin-top: 10px;
+  }
+  &-20 {
+    margin-top: 20px;
+  }
+  &-40 {
+    margin-top: 40px;
+  }
+  &-60 {
+    margin-top: 60px;
+  }
+}
+
+.mb {
+  &-10 {
+    margin-bottom: 10px;
+  }
+  &-20 {
+    margin-bottom: 20px;
+  }
+  &-40 {
+    margin-bottom: 40px;
+  }
+  &-60 {
+    margin-bottom: 60px;
+  }
+}
+
 .higia-button {
   position: fixed;
   right: 15px;

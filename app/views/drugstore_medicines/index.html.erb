@@ -1,25 +1,27 @@
 <div class="ibox-content animated fadeInRightBig">
   <% @drugstore_medicines.each do |drugstore_medicine| %>
-    <div class="col-lg-4">
-      <div class="contact-box">
-        <a class="row" href="profile.html">
-          <div class="col-4">
-            <div class="text-center">
-              <%= image_tag(drugstore_medicine.medicine.medicine_url) if drugstore_medicine.medicine.medicine_url %>
-              <div class="m-t-xs font-bold"><%= drugstore_medicine.medicine.name %></div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="contact-box">
+          <a class="row" href="profile.html">
+            <div class="col-4">
+              <div class="text-center">
+                <%= image_tag(drugstore_medicine.medicine.medicine_url) if drugstore_medicine.medicine.medicine_url %>
+                <div class="m-t-xs font-bold"><%= drugstore_medicine.medicine.name %></div>
+              </div>
             </div>
-          </div>
-          <div class="col-8">
-            <address>
-              <b><%= drugstore_medicine.drugstore.name %></b>
-              <%= drugstore_medicine.drugstore.city %><br>
-              <%= drugstore_medicine.drugstore.state %><br>
-              <%= drugstore_medicine.drugstore.cep %><br>
-              <abbr title="Phone">Telefone:</abbr> <%= drugstore_medicine.drugstore.phone %>
-            </address>
-          </div>
-        </a>
+            <div class="col-8">
+              <address>
+                <b><%= drugstore_medicine.drugstore.name %></b>
+                <%= drugstore_medicine.drugstore.city %><br>
+                <%= drugstore_medicine.drugstore.state %><br>
+                <%= drugstore_medicine.drugstore.cep %><br>
+                <abbr title="Phone">Telefone:</abbr> <%= drugstore_medicine.drugstore.phone %>
+              </address>
+            </div>
+          </a>
+        </div>
       </div>
-    </div>
+    </row>
   <% end %>
 </div>
