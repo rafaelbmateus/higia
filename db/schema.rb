@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_24_114940) do
+ActiveRecord::Schema.define(version: 2018_11_24_121141) do
 
   create_table "add_fields_to_drugstore_medicines", force: :cascade do |t|
     t.string "street"
@@ -89,6 +89,10 @@ ActiveRecord::Schema.define(version: 2018_11_24_114940) do
     t.integer "cep"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "street"
+    t.string "city"
+    t.string "state"
+    t.integer "number"
   end
 
   create_table "hospitals", force: :cascade do |t|

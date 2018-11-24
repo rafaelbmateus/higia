@@ -5,6 +5,7 @@
         <a class="row" href="profile.html">
           <div class="col-4">
             <div class="text-center">
+              <%= image_tag(drugstore_medicine.medicine) %>
               <img alt="image" class="rounded-circle m-t-xs img-fluid" src="img/a2.jpg">
               <div class="m-t-xs font-bold">Graphics designer</div>
             </div>
@@ -13,9 +14,9 @@
             <h3><strong><%= drugstore_medicine.medicine.name %></strong></h3>
             <h4><strong><%= drugstore_medicine.drugstore.name %></strong></h4>
             <address>
-              <strong><%= drugstore_medicine.drugstore.cep %></strong><br>
-              795 Folsom Ave, Suite 600<br>
-              San Francisco, CA 94107<br>
+              <%= drugstore_medicine.drugstore.city %><br>
+              <%= drugstore_medicine.drugstore.state %><br>
+              <%= drugstore_medicine.drugstore.cep %><br>
               <abbr title="Phone">Telefone:</abbr> <%= drugstore_medicine.drugstore.phone %>
             </address>
           </div>
