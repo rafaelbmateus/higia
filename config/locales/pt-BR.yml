@@ -7,7 +7,7 @@ pt-BR:
   new: Novo
   edit: Editar
   show: Detalhes
-  patients: Paciêntes
+  patients: Pacientes
   doctors: Médicos
   drugstores: Farmácias
   doctor_prescriptions: Prescrições Médicas
@@ -50,6 +50,9 @@ pt-BR:
         drugstore:
           name: Nome
           phone: Telefone
+          street: Rua
+          city: Cidade
+          state: Estado
           created_at: Criado em
           updated_at: Atualizado em
         hospital:

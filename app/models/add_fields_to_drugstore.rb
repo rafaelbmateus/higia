@@ -1,0 +1,2 @@
+class AddFieldsToDrugstore < ApplicationRecord
+end

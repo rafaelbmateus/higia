@@ -1,0 +1,1 @@
+json.partial! "add_fields_to_drugstore_medicines/add_fields_to_drugstore_medicine", add_fields_to_drugstore_medicine: @add_fields_to_drugstore_medicine

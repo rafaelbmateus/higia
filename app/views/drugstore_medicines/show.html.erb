@@ -1,16 +1,26 @@
 <p>
-  <strong>Medicine:</strong>
+  <strong>Medicamento:</strong>
   <%= @drugstore_medicine.medicine.name %>
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @drugstore_medicine.price %>
+  <strong>Farmácia:</strong>
+  <%= @drugstore_medicine.drugstore.name %>
 </p>
 
 <p>
-  <strong>Promotion:</strong>
-  <%= @drugstore_medicine.promotion_price %>
+  <strong>Descrição:</strong>
+  <%= @drugstore_medicine.medicine.description %>
 </p>
 
-<%= link_to 'Back', '/' %>
+<p>
+  <strong>Valor:</strong>
+  <% if @drugstore_medicine.promotion_price %>
+    De <%= number_to_currency(@drugstore_medicine.price, :unit => "R$") %> por <%= number_to_currency(@drugstore_medicine.promotion_price, :unit => "R$") %>
+  <% else %>
+    <%= number_to_currency(@drugstore_medicine.price, :unit => "R$") %>
+  <% end %>
+</p>
+<%= link_to 'Comprar', checkout_path, class: 'btn btn-primary' %>
+<br><br>
+<%= link_to 'Voltar', '/' %>

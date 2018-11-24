@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :add_fields_to_drugstores
+  resources :add_fields_to_drugstore_medicines
   get 'checkout/:id', to: 'checkout#index', as: 'checkout'
   get 'checkout/done/:id', to: 'checkout#done', as: 'checkout_done'
   get 'patients/my_medicines'

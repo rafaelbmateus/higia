@@ -1,0 +1,37 @@
+<%= form_with(model: add_fields_to_drugstore_medicine, local: true) do |form| %>
+  <% if add_fields_to_drugstore_medicine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(add_fields_to_drugstore_medicine.errors.count, "error") %> prohibited this add_fields_to_drugstore_medicine from being saved:</h2>
+
+      <ul>
+      <% add_fields_to_drugstore_medicine.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :street %>
+    <%= form.text_field :street %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number %>
+    <%= form.number_field :number %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

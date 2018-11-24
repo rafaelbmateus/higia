@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Add Fields To Drugstores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Street</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @add_fields_to_drugstores.each do |add_fields_to_drugstore| %>
+      <tr>
+        <td><%= add_fields_to_drugstore.street %></td>
+        <td><%= add_fields_to_drugstore.city %></td>
+        <td><%= add_fields_to_drugstore.state %></td>
+        <td><%= add_fields_to_drugstore.number %></td>
+        <td><%= link_to 'Show', add_fields_to_drugstore %></td>
+        <td><%= link_to 'Edit', edit_add_fields_to_drugstore_path(add_fields_to_drugstore) %></td>
+        <td><%= link_to 'Destroy', add_fields_to_drugstore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Add Fields To Drugstore', new_add_fields_to_drugstore_path %>
