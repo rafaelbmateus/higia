@@ -1,5 +1,7 @@
 <div class="controls">
-  <div class="button -purple new-medicine">Encontrar Medicamento</div>
+  <a href="../doctor_prescriptions/new.html">
+    <div class="button -solid-purple new-medicine">Encontrar Medicamento</div>
+    </a>
 </div>
 
 
@@ -8,13 +10,13 @@
 <div class="mt-20">
 <p>
   <strong>Clínica/Hospital:</strong>
-  Nome da Clinica
+  Clinica São Jorge
 </p>
 </div>
 
 <p>
   <strong>Endereço:</strong>
-  Rua Abacate, 201 - Florianópolis, Santa Catarina - Brasil
+  Rua das Flores, 201 - Florianópolis, Santa Catarina - Brasil
 </p>
 
 <p>
@@ -134,145 +136,41 @@
 </table>
 
 
-
-
-<div class="controls">
-  <div class="button -purple new-medicine">Encontrar Medicamento</div>
-</div>
-
-<p>
-  <strong>Médico:</strong>
-  <%= @doctor_prescription.doctor.name %>
-</p>
-
-<p>
-  <strong>Medicamento:</strong>
-  <%= @doctor_prescription.medicine.name %>
-</p>
-
-<p>
-  <strong>Dosagem:</strong>
-  <%= @doctor_prescription.dosage %>
-</p>
-
-<p>
-  <strong>Duração:</strong>
-  2 dias
-</p>
-
-<p>
-  <strong>Descrição:</strong>
-  <%= @doctor_prescription.description %>
-</p>
-
-<hr>
-
-
-<div class="button -purple">Iniciar tratamento</div>
-<div class="button -grey">Configurar Notificações</div>
-
-<table class="treatment">
-  <thead>
-   <tr>
-      <th>Dose</th>
-      <th>Dia</th>
-      <th width="100">Tomou a dose?</th>
-   </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        Dose 01
-      </td>
-      <td>
-        Dia 01
-      </td>
-      <td>
-        <input type="checkbox">
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Dose 02
-      </td>
-      <td>
-        Dia 01
-      </td>
-      <td>
-        <input type="checkbox">
-      </td>
-    </tr>
-
-  </tbody>
-</table>
-
-<table class="treatment">
-<thead>
-   <tr>
-      <th></th>
-      <th></th>
-      <th width="100"></th>
-   </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        Dose 01
-      </td>
-      <td>
-        Dia 02
-      </td>
-      <td>
-        <input type="checkbox">
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Dose 02
-      </td>
-      <td>
-        Dia 02
-      </td>
-      <td>
-        <input type="checkbox">
-      </td>
-    </tr>
-
-  </tbody>
-</table>
+<hr class="mt-40 mb-40">
 
 <div class="row">
-  <% drugstore_medicines = DrugstoreMedicine.where(medicine: @doctor_prescription.medicine) %>
-  <% drugstore_medicines.each do |drugstore_medicine| %>
-    <div class="col-md-3">
-      <div class="ibox">
-        <div class="ibox-content product-box <%= "active" if drugstore_medicine.promotion_price %>">
-          <div class="product-imitation">
-            <%= drugstore_medicine.medicine.medicine %>
-          </div>
-          <div class="product-desc">
-            <span class="product-price">
-              <% if drugstore_medicine.promotion_price %>
-                <%= number_to_currency(drugstore_medicine.promotion_price, :unit => "R$") %>
-              <% else %>
-                <%= number_to_currency(drugstore_medicine.price, :unit => "R$") %>
-              <% end %>
-            </span>
-            <small class="text-muted"><%= drugstore_medicine.drugstore.name %></small>
-            <a href="#" class="product-name"><%= drugstore_medicine.medicine.name %></a>
-            <div class="small m-t-xs">
-              <%= drugstore_medicine.medicine.description %>
-            </div>
-            <div class="m-t text-righ">
-              <%= link_to 'Comprar', checkout_path(drugstore_medicine), class: 'btn btn-xs btn-outline btn-primary' %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  <% end %>
-</div>
+  <div class="col-md-6">
+    <p>
+      <strong>Data:</strong>
+      30 de Novembro de 2018
+    </p>
+    
+    <p>
+      <strong>Médico:</strong>
+      Dr. João Pedro Gonçalves
+    </p>
+    
+    <p>
+      <strong>CRM:</strong>
+      15215267-1
+    </p>
+    
+    <p>
+      <strong>Especialidade (RQE):</strong>
+      Gastroenterologista - 142151
+    </p>
+
+
+<%= image_tag("assinatura.jpg", :alt => "digital-signature", :class => "signature") %>
+  </div>
+
+  <div class="col-md-6">
+    <p>
+      <strong>QR Code da Prescrição:</strong>
+    </p>
+    <%= image_tag("qr-code.png", :alt => "qrcode", :class => "qrcode") %>
+  </div>
+
+  <hr class="mt-40 mb-40">
 <br><br>
 <%= link_to 'Voltar', "/" %>

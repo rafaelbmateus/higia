@@ -13,8 +13,6 @@
 //= require pace/pace.min.js
 //= require peity/jquery.peity.min.js
 //= require slimscroll/jquery.slimscroll.min.js
-//= require jquery-ui.min.js
-//= require jquery.ui.chatbox.js
 //= require inspinia.js
 //= require toastr/toastr.min.js
 //= require autocomplete_zipcode

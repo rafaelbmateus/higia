@@ -1,7 +1,20 @@
 // START CUSTOM
 
+
+@media (max-width: 600px)  {
+  .ibox-content {
+    .dataTables_length {
+      display: none !important;
+    }
+    padding: 5px !important;
+    overflow: auto;
+  }
+}
+
+
 .chatbox {
-  width: 320px;
+  max-width: 290px;
+  width: 100%;
   height: 400px;
   background-color: white;
   border-radius: 8px;
@@ -127,6 +140,11 @@ input {
   }
 }
 
+.distance {
+  color: #a9b2ff;
+  font-weight: 600;
+}
+
 .higia-button {
   position: fixed;
   right: 15px;
@@ -183,6 +201,14 @@ table {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 30px;
+  @media (max-width: 600px)  {
+    flex-wrap: wrap;
+    .button {
+      text-align: center;
+      width: 100%;
+      margin: 5px 0 !important;
+    }
+  }
 }
 
 
