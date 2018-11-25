@@ -72,6 +72,10 @@
     pointer-events: auto;
 
   }
+
+  @media (max-width: 600px)  {
+    height: 300px;
+  }
 }
 
 input {
